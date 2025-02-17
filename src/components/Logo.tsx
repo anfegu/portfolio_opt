@@ -2,18 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Logo = () => {
-  const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => ({
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { duration: 1.5, delay: i * 0.2, ease: "easeOut" },
-        opacity: { duration: 0.01 }
-      }
-    })
-  };
-
   // Pixel blocks that make up the fox/crab
   const pixels = [
     // Cabeza
