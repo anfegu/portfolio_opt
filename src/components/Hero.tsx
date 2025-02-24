@@ -17,15 +17,6 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [showCursor, setShowCursor] = useState(true);
 
-  // Animated background dots
-  const dots = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    size: Math.random() * 4 + 2,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    duration: Math.random() * 2 + 2
-  }));
-
   const codeSnippets = [
     {
       title: 'blockchain.rs',
@@ -149,34 +140,8 @@ const Hero = () => {
     <section 
       id="home" 
       ref={ref}
-      className="relative min-h-screen flex items-start justify-center overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300 pt-12"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800/50 transition-colors duration-300 pt-12"
     >
-      {/* Animated particles */}
-      <div className="absolute inset-0">
-        {dots.map(dot => (
-          <motion.div
-            key={dot.id}
-            className="absolute rounded-full bg-blue-400 dark:bg-blue-500"
-            style={{
-              width: dot.size,
-              height: dot.size,
-              left: `${dot.x}%`,
-              top: `${dot.y}%`,
-              opacity: 0.2
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.5, 0.2]
-            }}
-            transition={{
-              duration: dot.duration,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content */}
       <motion.div
         className="relative z-20 w-full max-w-6xl mx-auto px-4 flex flex-col items-center justify-start pt-8"

@@ -37,17 +37,19 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
     if (currentLang === 'en') return text;
 
     try {
+      // Asegurarnos de que el texto se envíe como una sola unidad
       const response = await axios.get(API_URL, {
         params: {
           client: 'gtx',
           sl: 'en',
           tl: currentLang,
           dt: 't',
-          q: text,
+          q: text.replace(/\./g, '。').trim(), // Usar un punto especial que la API no trata como separador
         }
       });
 
-      return response.data[0][0][0];
+      // Restaurar los puntos originales
+      return response.data[0][0][0].replace(/。/g, '.');
     } catch (error) {
       console.error('Translation error:', error);
       return text;
