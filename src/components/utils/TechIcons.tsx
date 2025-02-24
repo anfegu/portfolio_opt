@@ -2,35 +2,34 @@ import {
   SiRust, SiReact, SiTypescript, SiNodedotjs,
   SiAmazon, SiPostgresql, SiMongodb, SiRedis,
   SiGraphql, SiPrisma, SiTailwindcss, SiNextdotjs,
-  SiVite, SiExpress, SiSolana, SiEthereum,
+  SiVite, SiExpress, SiSolana, 
   SiDocker, SiKubernetes, SiServerless,
   SiTestinglibrary, SiJest, SiOptimism,
   SiApollographql, SiSmartthings, SiFlutter,
-  SiHiveBlockchain, SiPolkadot, SiChainlink,
-  SiMatrix, SiApachekafka, SiElasticsearch,
+  
+  
   SiPostman, SiSwagger, SiGit, SiGithub,
-  SiVercel, SiCloudflare, SiNginx, SiRabbitmq,
-  SiCircleci, SiJenkins, SiSolidity,
+  SiVercel, 
+  SiCircleci, SiSolidity,
   SiWeb3Dotjs
 } from 'react-icons/si';
 import { 
-  BiCoin, BiCollection, BiGame,
-  BiLayer, BiNetworkChart,
-  BiCube, BiData, BiCodeBlock,
-  BiDiamond, BiCoinStack, BiPyramid,
-  BiGitCompare, BiShieldAlt2, BiLink
-} from 'react-icons/bi';
+  BiCoin, 
+  BiNetworkChart,
+  
+  
+  BiShieldAlt2} from 'react-icons/bi';
 import { 
-  FaEthereum, FaLayerGroup, FaProjectDiagram,
-  FaDatabase, FaServer, FaBrain,
-  FaNetworkWired, FaCode, FaRobot,
-  FaCloud, FaLock, FaGlobe,
+  FaEthereum, FaLayerGroup, 
+  
+  FaNetworkWired, 
+  FaCloud, FaLock, 
   FaLayerGroup as FaRollup
 } from 'react-icons/fa';
 import {
   IoSpeedometer, IoServerOutline,
-  IoCloudDone, IoFlashOutline,
-  IoCodeSlash, IoGitBranch,
+  
+  IoCodeSlash, 
   IoRefreshCircle, IoGitNetwork,
   IoEye
 } from 'react-icons/io5';
