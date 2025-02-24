@@ -85,7 +85,7 @@ const Skills = () => {
     <section
       id="skills"
       ref={ref}
-      className="pt-24 pb-8 -mt-16 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="pt-16 sm:pt-24 pb-4 sm:pb-8 -mt-16 bg-gradient-to-b from-blue-50/20 via-white to-white dark:from-gray-800/30 dark:via-gray-900 dark:to-gray-900 transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -95,7 +95,7 @@ const Skills = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="text-center mb-10">
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
                 <TranslatedText text="Education & Skills" />
               </h2>
@@ -103,7 +103,7 @@ const Skills = () => {
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 whileHover={{ scale: 1.02 }}
-                className="relative overflow-hidden bg-[url('/diploma-bg.png')] bg-cover bg-center rounded-xl p-10 shadow-xl mb-12"
+                className="relative overflow-hidden bg-[url('/diploma-bg.png')] bg-cover bg-center rounded-xl p-6 sm:p-10 shadow-xl mb-6 sm:mb-12"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-white/90 to-cyan-50/90 dark:from-blue-900/90 dark:via-gray-800/90 dark:to-cyan-900/90" />
                 <div className="absolute inset-0 border-[12px] border-double border-blue-200/20 dark:border-blue-700/20 rounded-lg" />
@@ -114,15 +114,15 @@ const Skills = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mb-6"
+                    className="mb-4 sm:mb-6"
                   >
-                    <div className="text-sm uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400 mb-2 font-semibold">
+                    <div className="text-xs sm:text-sm uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400 mb-1 sm:mb-2 font-semibold">
                       Degree in
                     </div>
-                    <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-300 mb-1">
+                    <h3 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-300 mb-1">
                       Software Engineering
                     </h3>
-                    <div className="text-sm uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400 mt-2 font-semibold">
+                    <div className="text-xs sm:text-sm uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400 mt-1 sm:mt-2 font-semibold">
                       from
                     </div>
                   </motion.div>
@@ -132,14 +132,14 @@ const Skills = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="relative"
                   >
-                    <p className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 font-medium">
+                    <p className="text-lg sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 font-medium">
                       La Salle University Colombia
                     </p>
                   </motion.div>
                 </div>
 
                 {/* Sello */}
-                <div className="absolute -right-6 -bottom-6 w-24 h-24">
+                <div className="absolute -right-4 sm:-right-6 -bottom-4 sm:-bottom-6 w-16 sm:w-24 h-16 sm:h-24">
                   <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 animate-[spin_10s_linear_infinite]" />
                   <div className="absolute inset-2 rounded-full border-4 border-purple-500/20 animate-[spin_15s_linear_infinite]" />
                   <div className="absolute inset-4 rounded-full border-4 border-cyan-500/20 animate-[spin_20s_linear_infinite]" />
@@ -149,7 +149,7 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
+                className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
               >
                 <TranslatedText text="Technical Expertise" />
               </motion.h3>
@@ -165,7 +165,7 @@ const Skills = () => {
                   key={index}
                   variants={skillCardVariants}
                   whileHover={{ scale: 1.02 }}
-                  className={`relative overflow-hidden bg-gradient-to-br p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border backdrop-blur-sm ${
+                  className={`relative overflow-hidden bg-gradient-to-br p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border backdrop-blur-sm ${
                     index === 0
                       ? "from-purple-500/5 via-white to-purple-500/5 dark:from-purple-900/20 dark:via-gray-800 dark:to-purple-900/20 border-purple-200/20 dark:border-purple-700/20"
                       : index === 1
@@ -233,14 +233,14 @@ const Skills = () => {
                             : "from-teal-500/0 via-teal-500/30 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/30 dark:to-teal-400/0"
                       }`} />
                     </motion.div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-12 justify-items-center mx-auto max-w-[90%]">
+                    <div className="grid grid-cols-3 gap-x-2 gap-y-6 sm:gap-x-6 sm:gap-y-12 justify-items-center mx-auto max-w-[95%] sm:max-w-[90%]">
                       {exp.techs.map((tech, idx) => (
                         <motion.div
                           key={idx}
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.1 + idx * 0.05 }}
-                          className="group relative flex flex-col items-center justify-center w-[4.5rem] h-[4.5rem] transition-all duration-500 hover:scale-110"
+                          className="group relative flex flex-col items-center justify-center w-[3.5rem] h-[3.5rem] sm:w-[4.5rem] sm:h-[4.5rem] transition-all duration-500 hover:scale-110"
                         >
                           <div 
                             className={`absolute inset-0 bg-gradient-to-br transition-all duration-500 ${
@@ -292,7 +292,7 @@ const Skills = () => {
                               } 
                             />
                           </div>
-                          <div className={`absolute -bottom-8 text-xs font-medium whitespace-nowrap px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-translate-y-2 ${
+                          <div className={`absolute -bottom-6 sm:-bottom-8 text-[10px] sm:text-xs font-medium whitespace-nowrap px-2 sm:px-3 py-0.5 sm:py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-translate-y-2 ${
                             index === 0 
                               ? "bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white shadow-purple-500/20"
                               : index === 1

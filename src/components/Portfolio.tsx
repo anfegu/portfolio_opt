@@ -227,7 +227,7 @@ const Portfolio = () => {
       key={refreshKey}
       id="work"
       ref={ref}
-      className="relative py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="relative py-20 bg-gradient-to-b from-white via-blue-50/10 to-white dark:from-gray-800/30 dark:via-gray-900 dark:to-gray-900 transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -256,8 +256,8 @@ const Portfolio = () => {
                 <motion.div
                   key={category.id}
                   variants={itemVariants}
-                  className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 ${
-                    selectedCategory?.id === category.id ? 'ring-2 ring-blue-500' : ''
+                  className={`bg-gradient-to-br from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 backdrop-blur-sm ${
+                    selectedCategory?.id === category.id ? 'ring-2 ring-blue-500 dark:ring-blue-400' : ''
                   }`}
                   ref={(el) => categoryRefs.current[category.id] = el}
                   onClick={() => handleCategoryClick(category)}
@@ -284,7 +284,7 @@ const Portfolio = () => {
                   <motion.div
                     key={project.id}
                     variants={itemVariants}
-                    className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                    className="group bg-gradient-to-br from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
                     onClick={() => setSelectedProject(project)}
                     whileHover={{ y: -5 }}
                   >
@@ -333,7 +333,7 @@ const Portfolio = () => {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full"
+                            className="text-sm px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800/50 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
                           >
                             {tech}
                           </span>
@@ -353,8 +353,8 @@ const Portfolio = () => {
                 {/* Category Card */}
                 <motion.div
                   variants={itemVariants}
-                  className={`bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 ${
-                    selectedCategory?.id === category.id ? 'ring-2 ring-blue-500' : ''
+                  className={`bg-gradient-to-br from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 rounded-lg p-4 shadow-lg transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700 backdrop-blur-sm ${
+                    selectedCategory?.id === category.id ? 'ring-2 ring-blue-500 dark:ring-blue-400' : ''
                   }`}
                   ref={(el) => categoryRefs.current[category.id] = el}
                   onClick={() => handleCategoryClick(category)}
@@ -382,7 +382,7 @@ const Portfolio = () => {
                       <motion.div
                         key={project.id}
                         variants={itemVariants}
-                        className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                        className="group bg-gradient-to-br from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
                         onClick={() => setSelectedProject(project)}
                         whileHover={{ y: -5 }}
                       >
@@ -430,7 +430,7 @@ const Portfolio = () => {
                             {project.technologies.map((tech) => (
                               <span
                                 key={tech}
-                                className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full"
+                                className="text-sm px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800/50 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
                               >
                                 {tech}
                               </span>
@@ -458,7 +458,7 @@ const Portfolio = () => {
             onClick={closeProject}
           >
             <motion.div
-              className="bg-white dark:bg-gray-800 rounded-lg max-w-6xl w-full h-[95vh] md:h-auto overflow-y-auto overscroll-behavior-y-contain mx-2 md:mx-6 relative"
+              className="bg-gradient-to-br from-white to-blue-50/30 dark:from-gray-800 dark:to-gray-800/80 rounded-lg max-w-6xl w-full h-[95vh] md:h-auto overflow-y-auto overscroll-behavior-y-contain mx-2 md:mx-6 relative backdrop-blur-sm border border-gray-200 dark:border-gray-700"
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -481,13 +481,13 @@ const Portfolio = () => {
                     </div>
                   </div>
                 ) : selectedProject.component && (
-                  <div className="h-[80vh] bg-gray-100 dark:bg-gray-700">
+                  <div className="h-[80vh] bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800">
                     <selectedProject.component {...selectedProject.componentProps} />
                   </div>
                 )}
                 <button
                   onClick={closeProject}
-                  className="fixed top-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-sm text-white hover:bg-black/90 transition-colors shadow-lg"
+                  className="fixed top-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-black/90 to-black/70 backdrop-blur-sm text-white hover:from-black hover:to-black transition-all duration-300 shadow-lg"
                 >
                   <FiX size={28} />
                 </button>
@@ -505,7 +505,7 @@ const Portfolio = () => {
                   {selectedProject.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full"
+                      className="text-sm px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800/50 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
                     >
                       {tech}
                     </span>
